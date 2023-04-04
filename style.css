@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 20% repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-areas: "sidebar header header"
+                         "sidebar content content"
+                         "sidebar content content";
+    grid-auto-rows: 1fr;
+    gap: 10px;
+}
+
+header {
+    grid-area: header;
+    border: solid rgb(239, 135, 37) 2px;
+
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border: solid rgb(0, 34, 255) 2px;
+}
+
+.content {
+    grid-area: content;
+    border: solid rgb(10, 10, 9) 2px;
+
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "projects anouncements"
+                         "projects trendings";
+}
+
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    
+}
+
+header * {
+    border: dotted darkred 1px;
+}
+
+img {
+    display: block;
+}
+
+.left {
+    justify-self: left;
+}
+
+
+
+.right {
+    justify-self: right;
+}
+
+.left > * {
+    display:inline;
+}
+
+
+.right > *, .right > div{
+    display:inline;
+}
+
+
+input {
+    height: min-content;
+}
+
+.info {
+    place-self: end;
+}
+
+.projects {
+    grid-area: projects;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.anouncements {
+    grid-area: anouncements;
+}
+
+.trendings {
+    grid-area: trendings;
+}
+
+.projects article {
+    border: dotted goldenrod 2px;
+}
