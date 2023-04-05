@@ -19,10 +19,11 @@ body {
 
 header {
     grid-area: header;
-    border: solid rgb(239, 135, 37) 2px;
+    background-color: aliceblue;
 
     display: grid;
     grid-template-columns: 100%;
+    border-bottom: solid black 2px;
 }
 
 .sidebar {
@@ -47,23 +48,42 @@ header {
     gap: 10px;
     
 }
-
+/*
 header * {
-    border: dotted darkred 1px;
+    border: solid darkred 1px;
 }
-
+*/
 img {
+    width: 30px;
+    height: 30px;
     display: block;
+    border-radius: 50%;
 }
 
 .left {
-    justify-self: left;
+   /* display: grid;
+    grid-template-columns : repeat(auto-fit, minmax(20px, 1fr));
+    place-items: center;  */
+    display: flex;
+    
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-left: 1.5rem;
 }
 
 
-
 .right {
-    justify-self: right;
+   /* display: grid;
+    grid-template-columns : repeat(auto-fit, minmax(20px, 1fr));
+    place-items: center;  */
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-right: 1.5rem;
 }
 
 .left > * {
@@ -76,13 +96,38 @@ img {
 }
 
 
-input {
-    height: min-content;
+.info {
+    align-self: center;
 }
 
-.info {
-    place-self: end;
+
+.top {
+    margin-top: 10px;
 }
+
+.bottom {
+    margin-right: 2.5rem;
+}
+
+input {
+    width: min-content;
+    flex: 1;
+    border-radius: 10px;
+}
+
+button {
+    font-size: 1.5rem;
+    
+    border-radius: 12px;
+}
+
+
+#profile {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
 
 .projects {
     grid-area: projects;
