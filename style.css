@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+html{
     height: 100%;
 }
 
@@ -13,8 +13,10 @@ body {
     grid-template-areas: "sidebar header header header header"
                          "sidebar content content content content"
                          "sidebar content content content content";
-    grid-auto-rows: 1fr;
+    grid-template-rows: 1fr 3fr;
+    place-content: stretch;
     gap: 5px;
+    height: 100%;
 }
 
 header {
@@ -28,19 +30,24 @@ header {
 
 .sidebar {
     grid-area: sidebar;
-    border: solid rgb(0, 34, 255) 2px;
 
     display: grid;
 }
 
 .content {
     grid-area: content;
-    border: solid rgb(10, 10, 9) 2px;
 
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "projects anouncements"
-                         "projects trendings";
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-areas: "projects projects projects anouncements"
+                         "projects projects projects anouncements"
+                         "projects projects projects anouncements"
+                         "projects projects projects anouncements"
+                         "projects projects projects anouncements"
+                         "projects projects projects anouncements";
+    height:max-content;
+    margin: 1.5rem;
+    
 }
 
 
@@ -137,18 +144,26 @@ button {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas: "title title"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject";
 }
 
 .anouncements {
     grid-area: anouncements;
+
+    display: grid;
 }
 
-.trendings {
-    grid-area: trendings;
-}
 
-.projects article {
-    border: dotted goldenrod 2px;
+
+.myprojects article {
+    background-color: rgb(184, 238, 238);
+    padding: 1rem;
 }
 
 /* Sidebar    */
@@ -209,14 +224,14 @@ li div{
      width: 40px;
  }
  
-ul {
+.sidebar ul {
     display:grid;
     grid-template-columns:80%;
     gap: .1rem;
     margin-bottom: 1.8rem;
  }
 
-li {
+.sidebar li {
  list-style: none;
  display:flex;
 }
@@ -233,7 +248,75 @@ li img {
      text-align:center;
       align-self:center
  }
+
+ /*  Projects   */
  
- 
+ .title {
+    grid-area: title;
+    margin-bottom: 1rem;
+ }
+
+ .myprojects {
+    grid-area: myproject;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+ }
+
+ .myprojects article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ }
+
+ .myprojects article div {
+    
+
+ }
+
+.pages {
+    flex: 2;
+}
+
+ .pages img, .pages video {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+ }
+
+ .links {
+    display: flex;
+    justify-content: flex-end;
+ }
+
+
+ /* Anouncements and trendings  */
+
+ menu {
+    display: grid;
+    justify-content: stretch;
+    row-gap: 2rem;
+ }
+
+ menu ul {
+    display:grid;
+    grid-template-columns:80%;
+    row-gap: .1rem;
+    margin-bottom: 1.8rem;
+ }
+
+ menu ul li {
+    align-self: center;
+    list-style: none;
+
+ }
+
+ h3 {
+    margin-left: -1.5rem;
+    font-size: 1.2rem;
+ }
 
 
