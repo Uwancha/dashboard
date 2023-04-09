@@ -27,6 +27,7 @@ header {
     border-bottom: .6rem solid rgb(7, 7, 55);
 
     display: grid;
+    grid-template-rows: repeat(2,1fr);
 }
 
 .sidebar {
@@ -56,9 +57,11 @@ header {
 }
 
 
+/*  Header */
+
 .header{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     color: rgb(7, 7, 55);
 }
@@ -71,29 +74,39 @@ img {
 }
 
 .left {
-   /* display: grid;
-    grid-template-columns : repeat(auto-fit, minmax(20px, 1fr));
-    place-items: center;  */
-    display: flex;
+    display: grid;
+    grid-template-columns : repeat(2, 1fr);
+    align-items: center;  
+    margin-right: auto;
+    gap: 1rem;
+   /* display: flex;
     
     align-items: center;
     flex-wrap: wrap;
     gap: 25px;
 
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; */
+}
+
+.left p {
+    justify-self: left;
+    font-weight: 700;
 }
 
 
 .right {
-   /* display: grid;
-    grid-template-columns : repeat(auto-fit, minmax(20px, 1fr));
-    place-items: center;  */
-    display: flex;
+    display: grid;
+    grid-template-columns : repeat(3, 1fr);
+    place-items: center; 
+    gap: 1rem; 
+    margin-left: auto;
+    margin-right: 2rem;
+  /*  display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 25px;
 
-    margin-right: 1.5rem;
+    margin-right: 1.5rem; */
 }
 
 .left > * {
@@ -105,27 +118,26 @@ img {
     display:inline;
 }
 
-
-.info {
-    align-self: center;
+.right p {
+    font-weight: 700;
 }
 
 
-.top {
-    margin-top: 10px;
-}
-
-.bottom {
-    margin-right: 2.5rem;
+label {
+    justify-self: end;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 input {
-    width: min-content;
-    flex: 1;
+    height: 30%;
     border-radius: .8rem;
     border: none;
     box-shadow: 1px 1px 5px rgba(241, 8, 8, 0.284);
-    background-color: aliceblue;
+    background-color: rgb(7, 7, 55);
+    color: azure;
+    font-size: 1.2rem;
+    justify-self: left;
 }
 
 button {
@@ -137,41 +149,19 @@ button {
     
 }
 
+button:hover {
+    text-shadow: 1px 1px aliceblue;
+    border: solid 2px aliceblue;
+}
+
 
 #profile {
     height: 80px;
     width: 80px;
     border-radius: 50%;
+    justify-self: end;
 }
 
-
-.projects {
-    grid-area: projects;
-
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-areas: "title title"
-                         "myproject myproject"
-                         "myproject myproject"
-                         "myproject myproject"
-                         "myproject myproject"
-                         "myproject myproject"
-                         "myproject myproject";
-}
-
-.anouncements {
-    grid-area: anouncements;
-
-    display: grid;
-}
-
-
-
-.myprojects article {
-    background-color: white;
-    padding: 1rem;
-}
 
 /* Sidebar    */
 
@@ -227,7 +217,26 @@ button {
     box-shadow: 1px 1px 10px rgb(11, 122, 220);
  }
 
+
  /*  Projects   */
+ 
+
+.projects {
+    grid-area: projects;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas: "title title"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject"
+                         "myproject myproject";
+}
+
+
  
  .title {
     grid-area: title;
@@ -250,6 +259,8 @@ button {
     gap: 1rem;
     box-shadow: 0px 1px 5px rgb(7, 7, 55, .5);
     border-radius: .9rem;
+    background-color: white;
+    padding: 1rem;
  }
  
 
@@ -266,11 +277,18 @@ button {
  .links {
     display: flex;
     gap: 1rem;
-    margin-right: -20rem;
+    margin-left: auto;
  }
 
 
  /* Anouncements and trendings  */
+
+
+ .anouncements {
+    grid-area: anouncements;
+
+    display: grid;
+}
 
  menu {
     display: grid;
