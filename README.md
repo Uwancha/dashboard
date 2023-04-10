@@ -1,19 +1,21 @@
 # dashboard
 Admin dashboard.
 
-# Dashboard
+
+**Dashboard**
 
     An admin dashboard mainly layed out with grid.
+![This is a picture of the project](./images/image.png)
 
-    ![This is a picture of the project](./images/image.png)
+About
 
-# About
+I built this project, while I am learning javascript-full-stack web development through the  **The Odin's Project(TOP)**, as a final project to demonstrate the skills and knowledge I learned from **Intermediate CSS and HTML** lesson.
 
-    I built this project, while I am learning javascript-full-stack web development through the  **The Odin's Project(TOP)**, as a final project to demonstrate the skills and knowledge I learned from **Intermediate CSS and HTML** lesson.
 
-# More 
+**More**
 
    The design for this project was given with specified requirements and flexibility to use my own styles and layout flow methods. 
+
 
 # Live demo
 
