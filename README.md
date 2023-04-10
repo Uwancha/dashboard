@@ -5,7 +5,7 @@ Admin dashboard.
 
     An admin dashboard mainly layed out with grid.
 
-    ![This is an image](https://github.com/uwancha/dashboard/blob/main/image.jpg?raw=true)
+    ![This is a picture of the project](./images/image.png)
 
 # About
 
