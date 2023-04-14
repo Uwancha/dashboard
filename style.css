@@ -143,15 +143,16 @@ input {
 button {
     font-size: 1.1rem;
     padding: .5rem;
-    background-color: rgb(7, 7, 55);
-    color: aliceblue;
+    /* border: solid 2px aliceblue; */
+    color: rgb(125, 148, 167);
     border-radius: .8rem;
     
 }
 
 button:hover {
     text-shadow: 1px 1px aliceblue;
-    border: solid 2px aliceblue;
+    background-color: rgb(7, 7, 55);
+    color: aliceblue;
 }
 
 
@@ -182,7 +183,7 @@ button:hover {
      width: 40px;
  }
  
-.sidebar ul {
+ .sidebar ul {
     display:grid;
     grid-template-columns:80%;
     gap: .1rem;
@@ -203,17 +204,17 @@ button:hover {
 }
  
  
- .sidebar li div{
+.sidebar li div{
      display:inline;
      text-align:center;
       align-self:center
  }
 
- .sidebar li:hover {
+.sidebar li:hover {
     text-shadow: 1px 1px aliceblue;
  }
 
- .sidebar li img:hover {
+.sidebar li img:hover {
     box-shadow: 1px 1px 10px rgb(11, 122, 220);
  }
 
@@ -238,12 +239,12 @@ button:hover {
 
 
  
- .title {
+.title {
     grid-area: title;
     margin-bottom: 1rem;
  }
 
- .myprojects {
+.myprojects {
     grid-area: myproject;
 
     display: grid;
@@ -252,7 +253,7 @@ button:hover {
     gap: 1rem;
  }
 
- .myprojects article{
+.myprojects article{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -274,7 +275,7 @@ button:hover {
     border-radius: .5rem;
  }
 
- .links {
+.links {
     display: flex;
     gap: 1rem;
     margin-left: auto;
@@ -284,19 +285,19 @@ button:hover {
  /* Anouncements and trendings  */
 
 
- .anouncements {
+.anouncements {
     grid-area: anouncements;
 
     display: grid;
 }
 
- menu {
+menu {
     display: grid;
     justify-content: stretch;
     row-gap: 2rem;
  }
 
- menu ul {
+menu ul {
     display:grid;
     grid-template-columns:80%;
     row-gap: .1rem;
@@ -307,7 +308,7 @@ button:hover {
     color: rgb(7, 7, 55);
  }
 
- menu ul li {
+menu ul li {
     align-self: center;
     list-style: none;
 
@@ -315,7 +316,7 @@ button:hover {
     gap: .5rem;
  }
 
- menu li img {
+menu li img {
     border-radius: 0px;
     height: 40px;
     width: 40px;
@@ -324,7 +325,7 @@ button:hover {
 
 
 
- h3 {
+h3 {
     margin-left: -1.5rem;
     font-size: 1.2rem;
  }
