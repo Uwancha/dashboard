@@ -347,6 +347,11 @@ menu li img {
     background-color:rgb(7, 7, 55);
 }
 
+#second ~ li a:hover{
+    color:rgb(240, 248, 255, .7)
+}
+   
+
 h3 {
     margin-left: -1.5rem;
     font-size: 1.2rem;
